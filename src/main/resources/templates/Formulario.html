@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+	<title>Gallery</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+  
+
+</head>
+<body>
+	<header>
+		<h1 class="float-l">
+			<a href="#" title="Titulo do Site">PolosCloset</a>
+		</h1>
+
+		<input type="checkbox" id="control-nav" /> <label for="control-nav"
+			class="control-nav"></label> <label for="control-nav"
+			class="control-nav-close"></label>
+
+		<nav class="float-r">
+        <ul class="list-auto">
+          <li>
+            <a href="/index" title="Início">Início</a>
+          </li>
+          <li>
+            <a href="/Sobre" title="Sobre Nós">Sobre Nós</a>
+          </li>
+          <li>
+            <a href="/Galeria" title="Galeria">Galeria</a>
+          </li>
+          <li>
+            <a href="/Contato" title="Contate-nos">Contate-nos</a>
+          </li>
+         
+        </ul>
+      </nav>
+	</header>
+
+
+
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<center>
+		<h1>Fale conosco</h1>
+	</center>
+
+	<br>
+
+	<div class="caixa caixa6">
+
+		<center>
+			<form name="formulario" action="/pessoa/salvar" method="post"
+				enctype="multipart/form-data">
+
+				<input type="text" name="nome" placeholder="Nome"
+					required="required"> <br>
+				<br> <input type="text" name="CPF" placeholder="CPF"
+					required="required"> <br>
+				<br> <input type="text" name="data_N"
+					placeholder="Data de Nascimento" required="required"> <br>
+				<br> <input type="text" name="end" placeholder="EndereÃ§o"
+					required="required"> <br>
+				<br> <input type="text" name="login" placeholder="UsuÃ¡rio"
+					required="required"> <br>
+				<br> <input type="text" name="senha" placeholder="Senha"
+					required="required"> <br>
+				<br> <input type="submit" name="enviar" value="Enviar Mensagem"
+					class="botao botaoGrande botaoVerde bordas"><br>
+				<br>
+
+				<!--  
+                            <input sec:authorize="hasRole('ADMIN')"> <a th:href="@{/pessoa/{id}(id = ${pessoa.id})}"><button type="button" class="btn btn-primary">Atualizar</button></a> </<input>
+    
+      					    <input sec:authorize="hasRole('ADMIN')"> <a class="btn btn-danger" th:href="@{/pessoa/excluir/{id}(id = ${pessoa.id})}"> Excluir </a> </input>
+
+						-->
+
+			</form>
+		</center>
+
+
+	</div>
+
+
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<center>
+
+		<br> <br> <br> <br> <br> <br> <br>
+		<br> <br> <br> <br> <br> <br> <br>
+		<footer class="preto">
+			<div class="conteudo">
+				<h6>
+					<p>CORPYRIGHT Â© 2018 TODOS OS DIREITOS RESERVADOS.</p>
+				</h6>
+				<h6>
+					<p>CRIADO POR PEDRO VICTOR</p>
+				</h6>
+				<h6>
+					<p>TEL: (85) 9 99551162</p>
+				</h6>
+
+			</div>
+		</footer>
+	</center>
+
+</body>
+</html>

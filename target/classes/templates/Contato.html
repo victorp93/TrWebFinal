@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contate-nos</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+  
+  <script>
+   
+
+    $(document).ready(function(){
+      $("#phone").mask("(99) 9-9999-9999");
+      $("#phone").on("blur", function() {
+          var last = $(this).val().substr( $(this).val().indexOf("-") + 1 );
+        if( last.length == 5 ) {
+            var move = $(this).val().substr( $(this).val().indexOf("-") + 1, 1 );
+          var lastfour = last.substr(1,4);
+          var first = $(this).val().substr( 0, 9 );
+          $(this).val( first + move + '-' + lastfour );
+          }
+        });
+      }); 
+  
+  </script>
+
+  
+</head>
+<body>
+	<header>
+      <h1 class="float-l">
+        <a href="#" title="Titulo do Site">PolosCloset</a>
+      </h1>
+      
+      <input type="checkbox" id="control-nav" />
+      <label for="control-nav" class="control-nav"></label>
+      <label for="control-nav" class="control-nav-close"></label>
+
+      <nav class="float-r">
+        <ul class="list-auto">
+          <li>
+            <a href="/index" title="Início">Início</a>
+          </li>
+          <li>
+            <a href="/Sobre" title="Sobre Nós">Sobre Nós</a>
+          </li>
+          <li>
+            <a href="/Galeria" title="Galeria">Galeria</a>
+          </li>
+          <li>
+            <a href="/Contato" title="Contate-nos">Contate-nos</a>
+          </li>
+         
+        </ul>
+      </nav>
+    </header>
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <center> <h1>Fale conosco</h1> </center>
+    
+    <br>
+
+    <div class="caixa caixa6">
+                    
+         <center><form name="formulario" action="" method="post">
+
+             <input type="text" name="nome" placeholder="Nome e sobrenome" required="required"> <br><br>
+                            
+             <input type="text" id="phone" pattern="\([0-9]{2}\) [0-9]{1}-[0-9]{4,6}-[0-9]{3,4}$" placeholder="Celular" required=â€œrequiredâ€�><br><br>
+
+             <input type="email" name="email" placeholder="exemplo@exemplo.com" required="required"><br><br>
+                            
+             <textarea name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required="required"></textarea
+             ><br><br>
+
+             <input type="submit" name="enviar" value="Enviar Mensagem" class="botao botaoGrande botaoCinza bordas ui-button ui-widget ui-corner-all"><br><br>
+             </form> </center>
+                    
+             </div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+    
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer class="preto">
+            <div class="conteudo">
+               <h6> <p>CORPYRIGHT Â© 2018 TODOS OS DIREITOS RESERVADOS.</p> </h6>
+                <h6><p>CRIADO POR PEDRO VICTOR</p></h6>
+                <h6> <p>TEL: (85) 9 99551162</p> </h6>
+
+            </div>
+        </footer>  </center>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contate-nos</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+  
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+
+
+  
+</head>
+<body>
+<header>
+      <h1 class="float-l">
+        <a href="#" title="Titulo do Site">PolosCloset</a>
+      </h1>
+      
+      <input type="checkbox" id="control-nav" />
+      <label for="control-nav" class="control-nav"></label>
+      <label for="control-nav" class="control-nav-close"></label>
+
+      <nav class="float-r">
+        <ul class="list-auto">
+          <li>
+            <a href="/index" title="Início">Início</a>
+          </li>
+          <li>
+            <a href="/Sobre" title="Sobre Nós">Sobre Nós</a>
+          </li>
+          <li>
+            <a href="/Galeria" title="Galeria">Galeria</a>
+          </li>
+          <li>
+            <a href="/Contato" title="Contate-nos">Contate-nos</a>
+          </li>
+         
+        </ul>
+      </nav>
+    </header>
+<br>
+<br>
+<br>
+<br>
+<center>
+<section id="produtos" >
+      <p>
+        <center><strong>Produtos</strong></center>
+      </p>
+
+     
+    	<div class="container">
+        
+        <div class="row">
+			
+          <div class="col-md-4 col-sm-12 col-xs-2 col-lg-4" th:each="produto : ${todosOsProdutos}">
+          
+             
+				<p><img alt="" th:src="@{'/imagem/'+${produto.nome}+.jpg}"/></p>
+				<p th:text="${produto.nome}"></p>
+	      		<p th:text = "'R$ ' + ${produto.preco}"></p>
+	      		<p > <a th:href="@{/produto/{id}(id = ${produto.id})}"><button type="button" class="highlights-button">Atualizar</button></a> </p>
+	      		<p> <a class="btn btn-danger" th:href="@{/produto/excluir/{id}(id = ${produto.id})}"> Excluir </a> </p>
+
+     
+			</div>
+     
+           <br>
+           <br>
+         </div>
+        </div>
+      </div>
+      
+    </section>
+    </center>
+    
+	
+
+<footer class="preto">
+            <div class="conteudo">
+               <h6> <p>CORPYRIGHT Â© 2018 TODOS OS DIREITOS RESERVADOS.</p> </h6>
+                <h6><p>CRIADO POR PEDRO VICTOR</p></h6>
+                <h6> <p>TEL: (85) 9 99551162</p> </h6>
+
+            </div>
+        </footer>  </center>
+
+</body>
+</html>
